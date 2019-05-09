@@ -39,5 +39,6 @@ enum						e_err
 
 void						error_handler(int errcode, char *msg);
 int							read_pieces(int fd, t_piece *pieces);
+t_piece					create_piece(char id, char *value);
 
 #endif
