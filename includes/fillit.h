@@ -15,6 +15,8 @@
 
 # include <stddef.h>
 
+# include "ft_math.h"
+
 # define MAX_PIECES 26
 # define PIECE_SIZE 20
 # define USAGE "usage: ./fillit [input_file]"
