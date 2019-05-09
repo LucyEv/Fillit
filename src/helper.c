@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   helper.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/06 15:01:08 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/08 17:04:53 by ivankozlov       ###   ########.fr       */
+/*   Created: 2019/05/08 16:54:14 by ivankozlov        #+#    #+#             */
+/*   Updated: 2019/05/08 17:03:06 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,14 @@
 
 #include "ft_printf.h"
 
-#include <fcntl.h>
-
-int		main(int ac, char *av[])
+void		print_pieces(t_piece *pieces, int size)
 {
-	int			fd;
-	int			count;
-	t_piece		tetris[MAX_PIECES];
+	int			i;
 
-	if (ac != 2)
-		error_handler(ERR_INVALID_ARG, USAGE);
-	fd = open(av[1], O_RDONLY);
-	if (fd < 0)
-		error_handler(ERR_FILE_NOT_FOUND, av[1]);
-	count = read_pieces(fd, tetris);
-	if (count < 0)
-		error_handler(ERR_INVALID_FILE, av[1]);
-	print_pieces(tetris, count);
-	return (0);
+	i = -1;
+	while (++i < size)
+	{
+		ft_printf("id: %c\n", pieces[i].id);
+		ft_printf("%s\n", pieces[i].value);
+	}
 }

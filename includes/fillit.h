@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 17:29:28 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/06 17:53:04 by ikozlov          ###   ########.fr       */
+/*   Updated: 2019/05/08 17:09:05 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ enum						e_err
 void						error_handler(int errcode, char *msg);
 int							read_pieces(int fd, t_piece *pieces);
 t_piece					create_piece(char id, char *value);
+
+void						print_pieces(t_piece *pieces, int size);
 
 #endif
