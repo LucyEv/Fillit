@@ -23,8 +23,7 @@ struct						s_piece
 {
 	char		id;
 	char		value[PIECE_SIZE];
-	int			x;
-	int			y;
+	t_point	hex[4];
 	int			w;
 	int			h;
 };
