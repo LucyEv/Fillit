@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 16:54:14 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/08 21:23:32 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/09 19:23:49 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		print_pieces(t_piece *pieces, int size)
 	while (++i < size)
 	{
 		p = pieces[i];
-		ft_printf("id: %c\n", pieces[i].id);
+		ft_printf("id: %c w: %d h: %d\n", p.id, p.w, p.h);
 		ft_printf("h0 %d %d\n", p.hex[0].x, p.hex[0].y);
 		ft_printf("h1 %d %d\n", p.hex[1].x, p.hex[1].y);
 		ft_printf("h2 %d %d\n", p.hex[2].x, p.hex[2].y);
