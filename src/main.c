@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 15:01:08 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/08 17:04:53 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/09 19:28:03 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		main(int ac, char *av[])
 	if (count < 0)
 		error_handler(ERR_INVALID_FILE, av[1]);
 	print_pieces(tetris, count);
+	print_map(solve(tetris, count));
 	return (0);
 }
