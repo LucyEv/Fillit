@@ -79,6 +79,7 @@ int			solve_map(t_map *m, t_piece *pieces, int pos, int count)
 			if (can_place_piece(m, p, x, y) && g_step < 10000)
 			{
 				place_piece(m, p, x, y);
+				if (PRETTY_FILLIT)
 				print_map(*m);
 				if (solve_map(m, pieces, pos + 1, count))
 					return (1);
