@@ -37,17 +37,19 @@ void		print_map(t_map map)
 	size_t		i;
 	size_t		j;
 
-	// CLEAR_SCREEN();
 	i = -1;
 	while (++i < map.size)
 	{
 		j = -1;
 		while (++j < map.size)
-			print_char_colors(map.map[i][j]);
+			if (PRETTY_FILLIT)
+				print_char_colors(map.map[i][j]);
+			else
+				ft_printf("%c", map.map[i][j] == 0 ? '.' : map.map[i][j]);
 		ft_printf("\n");
 	}
-	ft_printf("\n");
-	// usleep(100000);
+	if (PRETTY_FILLIT)
+		ft_printf("\n");
 }
 
 void		clear_map(t_map *m)

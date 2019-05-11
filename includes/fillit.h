@@ -20,6 +20,7 @@
 # define MAX_PIECES 26
 # define PIECE_SIZE 20
 # define MAX_MAP_SIZE 10
+# define PRETTY_FILLIT 0
 # define USAGE "usage: ./fillit [input_file]"
 
 struct						s_map
