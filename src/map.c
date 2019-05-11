@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 17:23:02 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/09 19:29:13 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/10 17:01:43 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void		print_char_colors(char ch)
 {
-	char						*color;
+	char				*color;
 	static	char		*colors[] = {
 		RED, GRN, YEL, BLU, MAG, CYN
 	};
@@ -54,5 +54,5 @@ void		print_map(t_map map)
 
 void		clear_map(t_map *m)
 {
-	ft_bzero(m->map, sizeof(char) * MAX_MAP_SIZE * MAX_MAP_SIZE);
+	ft_bzero(m->map, sizeof(char) * (MAX_MAP_SIZE * MAX_MAP_SIZE));
 }

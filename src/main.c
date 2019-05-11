@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 15:01:08 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/09 19:28:03 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/10 17:05:59 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ int		main(int ac, char *av[])
 	if (fd < 0)
 		error_handler(ERR_FILE_NOT_FOUND, av[1]);
 	count = read_pieces(fd, tetris);
-	if (count < 0)
+	if (count <= 0)
 		error_handler(ERR_INVALID_FILE, av[1]);
-	print_pieces(tetris, count);
 	print_map(solve(tetris, count));
 	return (0);
 }

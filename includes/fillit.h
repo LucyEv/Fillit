@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 17:29:28 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/09 19:23:32 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/10 15:44:40 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 struct						s_map
 {
-	size_t					size;
+	int						size;
 	char					map[MAX_MAP_SIZE][MAX_MAP_SIZE];
 };
 typedef struct s_map		t_map;

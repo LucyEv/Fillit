@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   piece.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 16:50:35 by ivankozlov        #+#    #+#             */
-/*   Updated: 2019/05/09 19:17:34 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/10 16:18:14 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "memory.h"
 #include "ftstring.h"
 
-void				set_w_and_h(t_piece *p, char *value)
+void			set_w_and_h(t_piece *p, char *value)
 {
 	int				i;
 	int				minx;

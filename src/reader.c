@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reader.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 15:59:15 by ikozlov           #+#    #+#             */
-/*   Updated: 2019/05/08 16:54:00 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2019/05/10 17:25:05 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,10 @@ int		valid_block(const char *str, int size)
 
 int		read_pieces(int fd, t_piece *pieces)
 {
-	int				pos;
+	int			pos;
 	size_t		ret;
-	char			buf[PIECE_SIZE + 1];
+	int			last_read;
+	char		buf[PIECE_SIZE + 1];
 
 	pos = 0;
 	while ((ret = read(fd, buf, PIECE_SIZE + 1)))
@@ -77,6 +78,7 @@ int		read_pieces(int fd, t_piece *pieces)
 			return (-1);
 		pieces[pos] = create_piece('A' + pos, buf);
 		pos++;
+		last_read = ret;
 	}
-	return (pos);
+	return (last_read == 20 ? pos : 0);
 }
