@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+         #
+#    By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/08 21:31:12 by ikozlov           #+#    #+#              #
-#    Updated: 2019/05/06 15:00:56 by ivankozlov       ###   ########.fr        #
+#    Updated: 2019/05/10 17:34:19 by ikozlov          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,14 +45,12 @@ INCLUDES = -I $(LIBFT_DIR)includes -I $(INC_DIR)
 
 all: $(NAME)
 
-$(LIB):
+$(NAME): $(OBJ)
 	@$(MAKE) -C $(LIBFT_DIR)
-
-$(NAME): $(LIB) $(OBJ)
-	$(CC) $(FLAGS) libft/libft.a -o $(NAME) $(OBJ)
+	@$(CC) $(OBJ) $(FLAGS) $(LIBFT) -o $(NAME) 
 	@echo "[INFO] $(NAME) executable created"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INC_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	$(CC) $(FLAGS) $(INCLUDES) -c $< -o $@
 
